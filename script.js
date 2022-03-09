@@ -1,10 +1,12 @@
-var nome = "cleiton"
-var nota1 = 6
-var nota2 = 7
-var nota3 = 9
-var nota4 = 10
+function Converter() {
+  var valorElemento = document.getElementById("valor");
+  var valor = valorElemento.value;
+  var valorEmDolarNumerico = parseFloat(valor);
 
-var media = (nota1+nota2+nota3+nota4)/4
+  var valorEmReal = valorEmDolarNumerico * 5;
+  console.log(valorEmReal);
 
-console.log("bem vindo dev " + nome)
-console.log("a media das notas foram " + media)
+  var elementoValorConvertido = document.getElementById("valorConvertido");
+  var valorConvertido = "O valor em Real é R$ " + valorEmReal;
+  elementoValorConvertido.innerHTML = valorConvertido;
+}
